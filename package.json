@@ -1,0 +1,17 @@
+{
+  "name": "ai-pr-reviewer",
+  "version": "1.0.0",
+  "description": "Listens for GitHub PR webhooks, fetches the diff, runs it through an LLM, and posts the review back as a PR comment.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "@octokit/rest": "^20.1.1",
+    "@anthropic-ai/sdk": "^0.32.0",
+    "dotenv": "^16.4.5"
+  }
+}
